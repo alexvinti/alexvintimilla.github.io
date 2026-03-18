@@ -1,20 +1,18 @@
-h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-section {
-  margin-top: 40px;
-}
 body {
-  background: rgb(75, 60, 243);
-  color: rgb(68, 215, 129);
-  font-family: 'Futura', 'Arial' sans-serif;
-  font-weight: bold;
+  background: rgb(255, 255, 255);
+  color: rgb(59, 157, 255);
+  font-family: 'Futura', 'Arial', sans-serif;
+  font-weight: lighter;
   padding: 40px;
-  line-height: 1.6; /* makes text easier to read */
+  line-height: 1.4;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers everything horizontally */
+  text-align: center;  /* centers text */
 }
 
+/* HEADINGS */
 h1 {
   font-size: 5em;
   margin-bottom: 0.5em;
@@ -27,25 +25,37 @@ h2 {
 }
 
 p {
-  font-size: 1.2em;
-  max-width: 600px; /* keeps lines readable */
-}
-section {
-  margin-top: 50px;
-  padding: 20px;
-  border-top: 1px solid rgb(238, 14, 14); /* subtle separation */
-}
-h1:hover {
-  color: #00ffff; /* neon cyan on hover */
-  cursor: pointer;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 1.5em;
+  max-width: 600px;
 }
 
+/* SECTION */
 section {
   width: 80%;
   max-width: 800px;
+  margin-top: 50px;
+  padding: 20px;
+  border-top: 1px solid rgba(59, 157, 255);
+}
+
+/* WORK BOXES */
+.work-box {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  padding: 20px;
+  margin: 10px auto;
+  width: 250px;
+
+  border: none;
+  background: none;
+
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.work-box:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+  cursor: pointer;
 }
