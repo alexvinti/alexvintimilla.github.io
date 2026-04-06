@@ -1,3 +1,4 @@
+/* ---------------- Base ---------------- */
 body {
   background: rgba(255, 255, 234, 0.817);
   color: rgb(59, 157, 255);
@@ -5,14 +6,14 @@ body {
   font-weight: lighter;
   padding: 40px;
   line-height: 1.4;
-  
+
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers everything horizontally */
-  text-align: center;  /* centers text */
+  align-items: center;
+  text-align: center;
 }
 
-/* HEADINGS */
+/* ---------------- Typography ---------------- */
 h1 {
   font-size: 5em;
   margin-bottom: 0.5em;
@@ -29,16 +30,36 @@ p {
   max-width: 600px;
 }
 
-/* SECTION */
+/* ---------------- Links (FIXES PURPLE ISSUE) ---------------- */
+a {
+  color: rgb(59, 157, 255);   /* same as your text */
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:visited {
+  color: rgb(59, 157, 255);   /* prevents purple */
+}
+
+a:hover {
+  color: #5db3ff;
+  opacity: 0.8;
+}
+
+a:active {
+  color: #3a9cff;
+}
+
+/* ---------------- Sections ---------------- */
 section {
   width: 80%;
   max-width: 800px;
   margin-top: 50px;
   padding: 20px;
-  border-top: 1px solid rgba(59, 157, 255);
+  border-top: 1px solid rgb(59, 157, 255);
 }
 
-/* WORK BOXES */
+/* ---------------- Work Boxes ---------------- */
 .work-box {
   display: block;
   text-decoration: none;
@@ -51,7 +72,7 @@ section {
   border: none;
   background: none;
 
-  transition: transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .work-box:hover {
@@ -59,12 +80,14 @@ section {
   opacity: 0.7;
   cursor: pointer;
 }
+
+/* ---------------- Home Link ---------------- */
 .home-link {
-  text-decoration: none; /* removes underline */
-  color: inherit;        /* keeps your blue color */
+  text-decoration: none;
+  color: inherit;
 }
 
 .home-link:hover h1 {
-  color: #5db3ff; /* same hover effect you already use */
+  color: #5db3ff;
   cursor: pointer;
 }
